@@ -19,12 +19,12 @@ export default function HeroSection() {
 
                     {/* Title */}
                     <div className="absolute top-16 left-10 z-10 text-[#25cc70] mix-blend-color-dodge font-serif font-extrabold text-[50px]">
-                        <p className="font-[Bungee]">Zuimi</p>
+                        <p className="font-serif">Zuimi</p>
                     </div>
 
                     {/* Main Content */}
                     <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-                        <p className="text-white mt-36 sm:text-2xl md:text-3xl lg:text-5xl font-extrabold font-serif">
+                        <p className="text-white mt-36 sm:text-2xl md:text-3xl lg:text-5xl font-extrabold font-[Bungee]">
                             Looking for blockbusters?
                         </p>
                         <p className="text-white sm:text-2xl md:text-2xl lg:text-4xl mt-6 font-bold font-serif">
