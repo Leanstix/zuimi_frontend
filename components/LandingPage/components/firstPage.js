@@ -18,7 +18,7 @@ export default function HeroSection() {
                     <div className="absolute inset-0 bg-black opacity-60"></div>
 
                     {/* Title */}
-                    <div className="absolute top-16 left-10 z-10 text-[#25cc70] mix-blend-color-dodge font-serif font-extrabold text-[50px]">
+                    <div className="absolute top-16 left-10 z-10 text-[#00D9FF] mix-blend-color-dodge font-serif font-extrabold text-[50px]">
                         <p className="font-serif">Zuimi</p>
                     </div>
 
@@ -30,7 +30,7 @@ export default function HeroSection() {
                         <p className="text-white sm:text-2xl md:text-2xl lg:text-4xl mt-6 font-bold font-[bungee]">
                             movies | series | tv shows
                         </p>
-                        <button className="text-white p-2 bg-[#25cc70] text-2xl font-[bungee] font-bold mt-5 rounded-lg">
+                        <button className="text-white p-2 bg-[#B00A0A] text-2xl font-[bungee] font-bold mt-5 rounded-lg">
                             Get Started
                         </button>
                     </div>
