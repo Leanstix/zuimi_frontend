@@ -18,7 +18,7 @@ export default function HeroSection() {
                     <div className="absolute inset-0 bg-black opacity-60"></div>
 
                     {/* Title */}
-                    <div className="absolute top-16 left-10 z-10 text-[#00D9FF] mix-blend-color-dodge font-serif font-extrabold text-[50px]">
+                    <div className="absolute left-10 z-10 text-[#00D9FF] mix-blend-color-dodge font-serif font-extrabold text-[50px]">
                         <p className="font-serif">Zuimi</p>
                     </div>
 
