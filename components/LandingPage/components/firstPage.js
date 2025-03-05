@@ -5,7 +5,7 @@ export default function HeroSection() {
     return (
         <>
 
-            <div className="relative h-screen w-screen">
+            <div className="relative h-full w-full">
                 <div className="container mx-auto h-full relative">
                     {/* Background Image */}
                     <Image
@@ -24,7 +24,7 @@ export default function HeroSection() {
 
                     {/* Main Content */}
                     <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-                        <p className="text-white mt-36 sm:text-2xl md:text-3xl lg:text-5xl font-extrabold font-[Bungee]">
+                        <p className="text-white mt-32 sm:text-2xl md:text-3xl lg:text-5xl font-extrabold font-[Bungee]">
                             Looking for blockbusters?
                         </p>
                         <p className="text-white sm:text-2xl md:text-2xl lg:text-4xl mt-6 font-bold font-[bungee]">
