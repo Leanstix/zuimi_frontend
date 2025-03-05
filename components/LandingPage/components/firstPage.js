@@ -5,7 +5,7 @@ export default function HeroSection() {
     return (
         <>
 
-            <div className="relative h-screen">
+            <div className="relative h-screen w-screen">
                 <div className="container mx-auto h-full relative">
                     {/* Background Image */}
                     <Image
