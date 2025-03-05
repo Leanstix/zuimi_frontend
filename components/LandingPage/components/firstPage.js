@@ -1,20 +1,15 @@
-import Head from 'next/head';
+import Image from 'next/image';
+import Background from '@/public/background.jpg';
 
 export default function HeroSection() {
     return (
         <>
-            <Head>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
-                    rel="stylesheet"
-                />
-            </Head>
 
             <div className="relative h-screen">
                 <div className="container mx-auto h-full relative">
                     {/* Background Image */}
-                    <img
-                        src="https://whatkeptmeup.com/wp-content/uploads/2022/01/wp-1641996088906-1024x576.jpg"
+                    <Image
+                        src={Background}
                         className="absolute inset-0 w-full h-full object-cover opacity-60"
                         alt="Background"
                     />
