@@ -27,10 +27,10 @@ export default function HeroSection() {
                         <p className="text-white mt-36 sm:text-2xl md:text-3xl lg:text-5xl font-extrabold font-[Bungee]">
                             Looking for blockbusters?
                         </p>
-                        <p className="text-white sm:text-2xl md:text-2xl lg:text-4xl mt-6 font-bold font-serif">
+                        <p className="text-white sm:text-2xl md:text-2xl lg:text-4xl mt-6 font-bold font-[bungee]">
                             movies | series | tv shows
                         </p>
-                        <button className="text-white p-2 bg-[#25cc70] text-2xl font-bold mt-5 rounded-lg">
+                        <button className="text-white p-2 bg-[#25cc70] text-2xl font-[bungee] font-bold mt-5 rounded-lg">
                             Get Started
                         </button>
                     </div>
