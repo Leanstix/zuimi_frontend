@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";// Import useRouter from next/navigation
 import Cookies from "js-cookie"; // Import js-cookie library
-import { login } from "@/app/lib/api";
+import { login } from "@/lib/api";
 
 export default function LoginComponent() {
   const [email, setEmail] = useState("");
