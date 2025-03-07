@@ -7,7 +7,6 @@ import { signUp } from '@/lib/api';
 const SignUp = () => {
   const [formData, setFormData] = useState({
     username: '',
-    universityId: '',
     password: '',
     confirmPassword: '',
   });
@@ -54,7 +53,6 @@ const SignUp = () => {
     try {
       await signUp({
         email: formData.username,
-        university_id: formData.universityId,
         password: formData.password,
       });
       setSuccess('Registration successful! Please check your email to activate your account.');
@@ -94,18 +92,6 @@ const SignUp = () => {
               className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
               placeholder="Enter Email..."
               value={formData.username}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mt-3">
-            <label htmlFor="universityId" className="block text-base mb-2">University ID</label>
-            <input
-              type="text"
-              id="universityId"
-              className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
-              placeholder="Enter University ID..."
-              value={formData.universityId}
               onChange={handleChange}
               required
             />
