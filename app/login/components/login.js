@@ -28,7 +28,6 @@ export default function LoginComponent() {
         access,
         email: userEmail,
         user_id,
-        university_id,
         refresh,
         ...extraContents
       } = response;
