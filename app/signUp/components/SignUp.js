@@ -6,16 +6,8 @@ import { signUp } from '@/lib/api';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-    confirmPassword: '',
+    email: '',
   });
-
-  const [hasMinLength, setHasMinLength] = useState(false);
-  const [hasUpperCase, setHasUpperCase] = useState(false);
-  const [hasLowerCase, setHasLowerCase] = useState(false);
-  const [hasNumeric, setHasNumeric] = useState(false);
-  const [hasSpecialChar, setHasSpecialChar] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -26,29 +18,11 @@ const SignUp = () => {
     setFormData((prevData) => ({ ...prevData, [id]: value }));
   };
 
-  const validatePassword = (password) => {
-    setHasMinLength(password.length >= 8);
-    setHasUpperCase(/[A-Z]/.test(password));
-    setHasLowerCase(/[a-z]/.test(password));
-    setHasNumeric(/\d/.test(password));
-    setHasSpecialChar(/[!@#$%^&*(),.?":{}|<>]/.test(password));
-  };
-
-  const handlePasswordChange = (e) => {
-    const password = e.target.value;
-    setFormData((prevData) => ({ ...prevData, password }));
-    validatePassword(password);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setSuccess('');
 
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
 
     try {
       await signUp({
