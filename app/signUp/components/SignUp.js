@@ -61,11 +61,11 @@ const SignUp = () => {
             <label htmlFor="username" className="block text-base mb-2">Email</label>
             <input
               type="email"
-              id="username"
+              id="email"
               className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
               placeholder="Enter Email..."
               value={formData.email}
-              onChange={handleChange}
+              onChange={handleChange}  // Add this line
               required
             />
           </div>
