@@ -22,29 +22,20 @@ const SignUp = () => {
     e.preventDefault();
     setError('');
     setSuccess('');
-
-
+  
     try {
-      await signUp({
-        email: formData.email,
-      });
+      await signUp({ email: formData.email });
       setSuccess('Registration successful! Please check your email to activate your account.');
-      
-      // Redirect to activation message page
+  
+      // Redirect after a delay
       setTimeout(() => {
         router.push('/activation-message');
       }, 3000);
     } catch (error) {
-      console.error("Full Axios Error:", error);
-
-      if (error.response) {
-        console.error("Response Data:", error.response.data);
-        console.error("Status Code:", error.response.status);
-        console.error("Headers:", error.response.headers);
-      } else if (error.request) {
-        console.error("No Response Received:", error.request);
+      if (error.response && error.response.data) {
+        setError(error.response.data.message || 'An error occurred during registration.');
       } else {
-        console.error("Error in Request Setup:", error.message);
+        setError('Failed to register. Please try again.');
       }
     }
   };
