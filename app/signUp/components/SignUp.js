@@ -13,11 +13,6 @@ const SignUp = () => {
 
   const router = useRouter();
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [id]: value }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
