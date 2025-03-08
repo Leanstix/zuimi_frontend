@@ -26,8 +26,7 @@ const SignUp = () => {
 
     try {
       await signUp({
-        email: formData.username,
-        password: formData.password,
+        email: formData.email,
       });
       setSuccess('Registration successful! Please check your email to activate your account.');
       
@@ -65,53 +64,10 @@ const SignUp = () => {
               id="username"
               className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
               placeholder="Enter Email..."
-              value={formData.username}
+              value={formData.email}
               onChange={handleChange}
               required
             />
-          </div>
-          <div className="mt-3">
-            <label htmlFor="password" className="block text-base mb-2">Password</label>
-            <input
-              type="password"
-              id="password"
-              className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
-              placeholder="Enter Password..."
-              value={formData.password}
-              onChange={handlePasswordChange}
-              required
-            />
-          </div>
-          <div className="mt-3">
-            <label htmlFor="confirmPassword" className="block text-base mb-2">Confirm Password</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              className="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
-              placeholder="Confirm Password"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          {/* Password Criteria Indicators */}
-          <div className="space-y-1 text-sm text-gray-600">
-            <div className={hasMinLength ? "text-green-500" : "text-gray-600"}>
-              {hasMinLength ? "✓" : "✗"} Minimum 8 characters
-            </div>
-            <div className={hasUpperCase ? "text-green-500" : "text-gray-600"}>
-              {hasUpperCase ? "✓" : "✗"} At least one uppercase letter
-            </div>
-            <div className={hasLowerCase ? "text-green-500" : "text-gray-600"}>
-              {hasLowerCase ? "✓" : "✗"} At least one lowercase letter
-            </div>
-            <div className={hasNumeric ? "text-green-500" : "text-gray-600"}>
-              {hasNumeric ? "✓" : "✗"} At least one number
-            </div>
-            <div className={hasSpecialChar ? "text-green-500" : "text-gray-600"}>
-              {hasSpecialChar ? "✓" : "✗"} At least one special character
-            </div>
           </div>
 
           <div className="mt-5">
